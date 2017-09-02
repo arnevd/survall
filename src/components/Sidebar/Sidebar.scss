@@ -1,0 +1,165 @@
+@import '../../styles/app';
+
+.root {
+  width: $sidebar-width-open;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $sidebar-bg-color;
+  color: $sidebar-color;
+  overflow-y: auto;
+}
+
+.sidebarScroll {
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: none;
+    background-color: #eee;
+
+    @include box-shadow(inset 1px 1px 0 rgba(0, 0, 0, 0.1));
+  }
+}
+
+.logo {
+  margin: 11px 0 19px;
+  height: $navbar-height;
+  font-size: 18px;
+  width: 100%;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: width 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.sidebarClose .logo {
+  width: 50px;
+}
+
+.staticSidebar .logo {
+  width: 100%;
+  transition: none;
+}
+
+.nav {
+  padding: 10px 0;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
+.navTitle {
+  margin: 35px 0 5px 11px;
+  font-size: 14px;
+  transition: opacity 0.3s ease-in-out;
+
+  @media (min-width: 992px) {
+    opacity: 1;
+  }
+}
+
+.sidebarClose .navTitle {
+  opacity: 0;
+}
+
+.staticSidebar .navTitle {
+  opacity: 1;
+  transition: none;
+}
+
+.actionLink {
+  color: #aaa;
+  float: right;
+  margin-right: 15px;
+  margin-top: -1px;
+}
+
+.labelName {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebarClose .labelName {
+  opacity: 0;
+}
+
+.staticSidebar .labelName {
+  transition: none;
+  opacity: 1;
+}
+
+.glyphiconSm {
+  font-size: 9px;
+}
+
+.sidebarLabels {
+  list-style-type: none;
+  font-size: 13px;
+  padding: 11px;
+  padding-right: 15px;
+
+  > li + li {
+    margin-top: 7px;
+  }
+
+  li > a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: normal;
+
+    > i {
+      font-size: 11px;
+      vertical-align: 1px;
+      transition: margin-left 0.3s ease-in-out;
+    }
+  }
+}
+
+.sidebarClose {
+  .sidebarLabels > li > a > i {
+    margin-left: 8px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+}
+
+.staticSidebar {
+  .sidebarLabels > li > a > i {
+    transition: none;
+    margin-left: 0;
+  }
+}
+
+.sidebarAlerts {
+  font-size: 13px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.sidebarClose .sidebarAlerts {
+  opacity: 0;
+}
+
+.staticSidebar .sidebarAlerts {
+  opacity: 1;
+  transition: none;
+}
+
+.sidebarAlert {
+  background: transparent;
+  margin-bottom: 0;
+  padding: 0.5rem 11px;
+  padding-right: 15px;
+}
+
+.sidebarProgress {
+  background: lighten($sidebar-bg-color, 10%);
+}

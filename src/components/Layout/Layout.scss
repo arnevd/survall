@@ -1,0 +1,49 @@
+@import '../../styles/app';
+
+.root {
+  height: 100%;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+
+  &.chatOpen {
+    left: -254px;
+  }
+}
+
+.wrap {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  margin-left: 50px;
+  flex-direction: column;
+  left: 150px;
+  right: 0;
+  transition: left 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    left: 200px;
+  }
+}
+
+.sidebarClose div.wrap {
+  left: 0;
+}
+
+.sidebarStatic .wrap {
+  transition: none;
+  left: 0;
+  margin-left: 200px;
+}
+
+.content {
+  flex-grow: 1;
+  // 20px for footer height
+  padding: $content-padding $content-padding ($content-padding + 20px);
+  background-color: $body-bg;
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+}

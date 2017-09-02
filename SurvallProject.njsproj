@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1253f550-55d2-4f7f-991c-5bfe00f8a7c7}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>tools\runServer.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include=".eslintrc.js" />
+    <Content Include="build\assets.json" />
+    <Content Include="build\package.json" />
+    <Compile Include="build\server.js" />
+    <Content Include="docs\getting-started.md" />
+    <Content Include="docs\how-to-configure-text-editors.md" />
+    <Content Include="docs\react-style-guide.md" />
+    <Content Include="docs\README.md" />
+    <Content Include="docs\testing-your-application.md" />
+    <Content Include="public\humans.txt" />
+    <Content Include="public\robots.txt" />
+    <Content Include="public\apple-touch-icon.png" />
+    <Content Include="public\tile-wide.png" />
+    <Content Include="public\tile.png" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\browserconfig.xml" />
+    <Content Include="public\crossdomain.xml" />
+    <Compile Include="src\client.js" />
+    <Compile Include="src\config.js" />
+    <Compile Include="src\createFetch.js" />
+    <Compile Include="src\devUtils.js" />
+    <Compile Include="src\DOMUtils.js" />
+    <Compile Include="src\history.js" />
+    <Compile Include="src\api-routes\Login.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\server.js" />
+    <Compile Include="test\setup.js" />
+    <Content Include="tools\README.md" />
+    <Compile Include="tools\build.js" />
+    <Compile Include="tools\bundle.js" />
+    <Compile Include="tools\clean.js" />
+    <Compile Include="tools\copy.js" />
+    <Compile Include="tools\deploy.js" />
+    <Compile Include="tools\render.js" />
+    <Compile Include="tools\run.js" />
+    <Compile Include="tools\runServer.js" />
+    <Compile Include="tools\start.js" />
+    <Compile Include="tools\webpack.config.js" />
+    <Content Include="build\public\humans.txt" />
+    <Content Include="build\public\robots.txt" />
+    <Content Include="build\public\apple-touch-icon.png" />
+    <Content Include="build\public\tile-wide.png" />
+    <Content Include="build\public\tile.png" />
+    <Content Include="build\public\favicon.ico" />
+    <Content Include="build\public\browserconfig.xml" />
+    <Content Include="build\public\crossdomain.xml" />
+    <Content Include="build\public\assets\src\images\a2.png" />
+    <Content Include="build\public\assets\src\images\avatar.png" />
+    <Content Include="build\public\assets\src\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="build\public\assets\src\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="build\public\assets\src\images\people\a1.jpg" />
+    <Content Include="build\public\assets\src\images\people\a2.jpg" />
+    <Content Include="build\public\assets\src\images\people\a3.jpg" />
+    <Content Include="build\public\assets\src\images\people\a4.jpg" />
+    <Content Include="build\public\assets\src\images\people\a5.jpg" />
+    <Content Include="build\public\assets\src\images\people\a6.jpg" />
+    <Content Include="docs\recipes\how-to-implement-routing.md" />
+    <Content Include="docs\recipes\how-to-integrate-react-intl.md" />
+    <Content Include="docs\recipes\using-npm-and-webpack-as-a-build-tool.md" />
+    <Content Include="src\actions\README.md" />
+    <Compile Include="src\actions\alerts.js" />
+    <Compile Include="src\actions\navigation.js" />
+    <Compile Include="src\actions\user.js" />
+    <Compile Include="src\components\App.js" />
+    <Compile Include="src\components\Html.js" />
+    <Compile Include="src\core\Bundle.js" />
+    <Compile Include="src\core\screenHelper.js" />
+    <Compile Include="src\core\withMeta.js" />
+    <Content Include="src\images\a2.png" />
+    <Content Include="src\images\angular-logo.png" />
+    <Content Include="src\images\angularclass-avatar.png" />
+    <Content Include="src\images\angularclass-logo.png" />
+    <Content Include="src\images\avatar.png" />
+    <Content Include="src\images\search.png" />
+    <Content Include="src\images\sing-preview.png" />
+    <Content Include="src\images\sing-screenshot.png" />
+    <Compile Include="src\reducers\alerts.js" />
+    <Compile Include="src\reducers\auth.js" />
+    <Compile Include="src\reducers\index.js" />
+    <Compile Include="src\reducers\navigation.js" />
+    <Compile Include="src\store\configureStore.js" />
+    <Compile Include="src\store\createHelpers.js" />
+    <Content Include="src\components\Chat\package.json" />
+    <Compile Include="src\components\Chat\Chat.js" />
+    <Content Include="src\components\Header\package.json" />
+    <Compile Include="src\components\Header\Header.js" />
+    <Content Include="src\components\Layout\package.json" />
+    <Compile Include="src\components\Layout\Layout.js" />
+    <Compile Include="src\components\Layout\Layout.test.js" />
+    <Compile Include="src\components\Notifications\Notifications.js" />
+    <Content Include="src\components\Sidebar\package.json" />
+    <Compile Include="src\components\Sidebar\Sidebar.js" />
+    <Content Include="src\components\Widget\package.json" />
+    <Compile Include="src\components\Widget\Widget.js" />
+    <Compile Include="src\components\Notifications\notifications-demo\Messages.js" />
+    <Compile Include="src\components\Notifications\notifications-demo\Notifications.js" />
+    <Compile Include="src\components\Notifications\notifications-demo\Progress.js" />
+    <Compile Include="src\components\Sidebar\LinksGroup\LinksGroup.js" />
+    <Content Include="src\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="src\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="src\images\people\a1.jpg" />
+    <Content Include="src\images\people\a2.jpg" />
+    <Content Include="src\images\people\a3.jpg" />
+    <Content Include="src\images\people\a4.jpg" />
+    <Content Include="src\images\people\a5.jpg" />
+    <Content Include="src\images\people\a6.jpg" />
+    <Compile Include="src\pages\dashboard\Dashboard.js" />
+    <Compile Include="src\pages\error\ErrorPage.js" />
+    <Compile Include="src\pages\login\Login.js" />
+    <Compile Include="src\pages\profile\Profile.js" />
+    <Content Include="src\store\logger\package.json" />
+    <Compile Include="src\store\logger\logger.client.js" />
+    <Compile Include="src\store\logger\logger.server.js" />
+    <Compile Include="tools\lib\cp.js" />
+    <Compile Include="tools\lib\fs.js" />
+    <Compile Include="tools\lib\markdown-loader.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="build" />
+    <Folder Include="build\public" />
+    <Folder Include="build\public\assets" />
+    <Folder Include="build\public\assets\src" />
+    <Folder Include="build\public\assets\src\fonts" />
+    <Folder Include="build\public\assets\src\fonts\font-awesome" />
+    <Folder Include="build\public\assets\src\fonts\glyphicons" />
+    <Folder Include="build\public\assets\src\images" />
+    <Folder Include="build\public\assets\src\images\people" />
+    <Folder Include="docs" />
+    <Folder Include="docs\recipes" />
+    <Folder Include="public" />
+    <Folder Include="src" />
+    <Folder Include="src\actions" />
+    <Folder Include="src\components" />
+    <Folder Include="src\components\Chat" />
+    <Folder Include="src\components\Header" />
+    <Folder Include="src\components\Layout" />
+    <Folder Include="src\components\Notifications" />
+    <Folder Include="src\components\Notifications\notifications-demo" />
+    <Folder Include="src\components\Sidebar" />
+    <Folder Include="src\components\Sidebar\LinksGroup" />
+    <Folder Include="src\components\Widget" />
+    <Folder Include="src\core" />
+    <Folder Include="src\fonts" />
+    <Folder Include="src\fonts\font-awesome" />
+    <Folder Include="src\fonts\glyphicons" />
+    <Folder Include="src\images" />
+    <Folder Include="src\images\people" />
+    <Folder Include="src\api-routes\" />
+    <Folder Include="src\pages" />
+    <Folder Include="src\pages\dashboard" />
+    <Folder Include="src\pages\error" />
+    <Folder Include="src\pages\login" />
+    <Folder Include="src\pages\profile" />
+    <Folder Include="src\reducers" />
+    <Folder Include="src\store" />
+    <Folder Include="src\store\logger" />
+    <Folder Include="src\styles" />
+    <Folder Include="SurvallProject" />
+    <Folder Include="test" />
+    <Folder Include="tools" />
+    <Folder Include="tools\lib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

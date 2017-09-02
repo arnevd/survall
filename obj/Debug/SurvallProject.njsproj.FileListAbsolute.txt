@@ -1,0 +1,3 @@
+C:\Projects\Survall\obj\Debug\SurvallProject.njsprojResolveAssemblyReference.cache
+C:\Projects\Survall\obj\Debug\SurvallProject.njsproj.CoreCompileInputs.cache
+C:\Projects\Survall\bin\Microsoft.NodejsTools.WebRole.dll

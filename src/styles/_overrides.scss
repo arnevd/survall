@@ -1,0 +1,274 @@
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar {
+  border: none;
+}
+
+.progress-bar {
+  @include box-shadow(none);
+}
+
+.progress-sm {
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+.progress-xs {
+  height: 5px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-right {
+    .dropdown-menu {
+      left: 0;
+    }
+  }
+}
+
+.form-control {
+  font-family: $font-family-base;
+  font-size: $font-size-base - 0.0625rem;
+  box-shadow: none;
+  transition: border-color ease-in-out 0.15s, background-color ease-in-out 0.15s;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.no-border {
+    border: none;
+    background-color: darken($input-bg, 5%);
+
+    &:focus {
+      background-color: darken($input-bg, 7%);
+    }
+  }
+}
+
+.input-sm {
+  font-size: 13px;
+}
+
+.alert {
+  font-size: $font-size-sm;
+
+  .close {
+    color: rgba(#000, 0.4);
+  }
+}
+
+.alert-sm {
+  padding: 10px 15px;
+
+  .close {
+    font-size: 20px;
+    top: 0;
+    right: -8px;
+  }
+}
+
+.badge {
+  //font-size: 12px;
+
+  &.badge-pill {
+    font-size: 100%;
+  }
+
+  .list-group-item > & {
+    margin-top: 2px;
+  }
+}
+
+.table-no-border {
+  margin-left: -$table-cell-padding;
+  margin-right: -$table-cell-padding;
+
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    border-top: 0;
+  }
+}
+
+.table-sm {
+  font-size: $font-size-sm;
+
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    padding: 4px;
+  }
+
+  &.table-no-border {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 300;
+}
+
+.small,
+small {
+  font-size: 85%;
+}
+
+///////// Buttons //////////
+
+.btn-link {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-inverse {
+  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-secondary.active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+///////// Dropdowns //////////
+
+.dropdown-menu {
+  font-size: $font-size-mini;
+}
+
+.nav-item.dropdown {
+  .nav-link {
+    height: 100%;
+  }
+
+  &.show {
+    .nav-link {
+      background-color: $gray-lighter;
+      color: $gray;
+    }
+  }
+}
+
+///////// Alerts //////////
+
+.alert {
+  button.close {
+    font-size: 16px;
+    text-shadow: none;
+    opacity: 1;
+    color: #aaa;
+    outline: none;
+    padding: 0;
+    position: static;
+  }
+}
+
+///////// Breadcrumbs //////////
+
+.breadcrumb {
+  color: $gray-light;
+  margin-bottom: $spacer-y*1.5;
+  margin-top: 0;
+  font-size: $font-size-sm;
+
+  > .active {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  padding: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: $gray-light;
+}
+
+///////// Glyphicons //////////
+
+.glyphicon {
+  vertical-align: middle;
+}
+
+///////// Font Awesome //////////
+
+.navbar {
+  .fa {
+    &.fa-lg {
+      line-height: 19px;
+    }
+  }
+}
+
+///////// Tooltips //////////
+
+.bs-tether-target.show {
+  display: inline-block !important;
+}
+
+///////// Base Elements //////////
+
+.navbar-notifications {
+  .list-group-item:hover {
+    .progress {
+      background: $white;
+    }
+  }
+}
+
+///////// List Group //////////
+
+.list-group {
+  .list-group-item {
+    background-color: transparent;
+  }
+}
+
+////////// Headings //////////
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  small,
+  .small {
+    font-weight: $font-weight-thin;
+    font-size: 75%;
+    color: $text-muted;
+  }
+}

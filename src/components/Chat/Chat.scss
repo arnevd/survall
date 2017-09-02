@@ -1,0 +1,188 @@
+@import '../../styles/app';
+
+.root {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: -254px;
+  width: 254px;
+  background-color: #242424;
+  color: #aaa;
+  transition: right 0.3s ease-in-out;
+
+  &.chatOpen {
+    right: 0;
+  }
+
+  .chatHeader {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    padding: 10px;
+
+    input {
+      padding: 0.6rem 0.85rem;
+      line-height: 1.5;
+    }
+
+    .chatTitle {
+      margin: 10px;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .chatPanel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    ul {
+      li {
+        border: 0;
+        padding: 10px 20px;
+        z-index: 1;
+
+        .cirle {
+          font-size: 11px;
+          line-height: 37px;
+          margin-left: auto;
+        }
+      }
+    }
+
+    .navTitle {
+      margin: 35px 10px 5px 20px;
+      font-size: 14px;
+    }
+
+    .navTitle:first-child {
+      margin-top: 0;
+    }
+
+    .messageSender {
+      text-overflow: ellipsis;
+    }
+
+    .messagePreview {
+      margin: 0;
+      width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 85%;
+      color: #999;
+    }
+  }
+
+  .chatContacts {
+    padding-top: 100px;
+    left: -100%;
+    transition: left 0.2s ease-in-out;
+
+    ul {
+      margin-top: 10px;
+
+      li {
+        cursor: pointer;
+      }
+    }
+
+    &.chatMessageOpen {
+      left: 0;
+    }
+  }
+
+  .chatMessages {
+    padding-top: 100px;
+    right: -100%;
+    transition: right 0.2s ease-in-out;
+
+    ul {
+      padding-top: 0.5rem;
+      margin-bottom: 1rem;
+      position: absolute;
+
+      li {
+        align-items: flex-start;
+      }
+
+      span {
+        position: absolute;
+      }
+
+      .messageBody {
+        position: relative;
+        width: 100%;
+        margin-left: 50px;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: $font-weight-normal;
+        background-color: $gray-lighter;
+        color: $text-color;
+        border-radius: 0.25rem;
+
+        &::before {
+          right: 100%;
+          top: 8px;
+          content: '';
+          height: 0;
+          width: 0;
+          position: absolute;
+          border: 10px solid rgba(0, 0, 0, 0);
+          border-right-color: $gray-lighter;
+        }
+      }
+
+      .fromMe {
+        flex-direction: row-reverse;
+
+        span {
+          float: right;
+        }
+
+        .messageBody {
+          margin-left: 0;
+          margin-right: 50px;
+          background-color: $brand-warning;
+          color: $gray-dark;
+
+          &::before {
+            right: auto;
+            left: 100%;
+            border-right-color: rgba(0, 0, 0, 0);
+            border-left-color: $brand-warning;
+          }
+        }
+      }
+    }
+
+    .chatFooter {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 10px;
+      background-color: #3a3a3a;
+    }
+
+    &.chatMessageOpen {
+      right: 0;
+    }
+
+    .messagesTitle {
+      margin-bottom: 0;
+
+      a {
+        display: block;
+        padding: 10px 16px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
